@@ -28,7 +28,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/core:latest
       - name: "Deploy: core.flagbase.xyz"
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.FLAGBASE_COM_ACCESS_TOKEN }}
           repository: ${{ secrets.FLAGBASE_COM_REPO }}
